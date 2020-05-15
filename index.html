@@ -98,7 +98,7 @@
 				ул. Б. Конюшенная, д. 19/8<br>
 				тел. +7 (812) 275-75-75</p>
 				<button>Напишите нам</button>
-				<img src="img/map.jpg" width="1440" height="418" alt="карта">
+				<img src="img/map.jpg" width="1440" height="418" alt="Индекс 191186, город Санкт-Петербург, ул. Б. Конюшенная, д. 19/8, тел. +7 (812) 275-75-75">
 			</section>
 		</main>
 		<footer class="main-footer">
@@ -113,9 +113,24 @@
 			</div>
 		</footer>
 		<section>
-			<h2>Напишите нам</h2>
-			<!-- Здесь будет форма -->
-			<span class="modal-close">x</span>
+			<h2 class="visually-hidden">Напишите нам</h2>
+			<form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+				<h2>Напишите нам</h2>
+				<p class="write-us-item">
+					<label for="write-us-name">Ваше имя:</label>
+					<input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
+				</p>
+				<p class="write-us-item">
+					<label for="write-us-e-mail">Ваш e-mail:</label>
+					<input type="text" id="write-us-e-mail" name="e-mail" placeholder="email@example.com">	
+				</p>
+				<p class="write-us-item">
+					<label>Текст письма:</label>
+				</p>
+				<p class="write-us-item"><textarea name="text" id="text" cols="30" rows="10">В свободной форме</textarea></p>
+				<button class="button" type="submit">ОТПРАВИТЬ</button>
+			</form>
+			<button class="modal-close" type="button">Закрыть</button>
 		</section>
 	</body>
 </html>
