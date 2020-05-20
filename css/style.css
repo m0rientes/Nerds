@@ -1,0 +1,238 @@
+/* глобальные правила ------------------------------------------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #283136;
+  background-color: #ffffff;
+}
+a {
+  text-decoration: none;
+}
+/* Навигация -----------------------------------------------------------------------------*/
+.main-header {
+  width: 100%;
+  height: 545px;
+  background-color: #eeeeee;
+}
+.main-navigation {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
+.main-header-logo {
+  display: block;
+  width: 160px;
+  height: 65px;
+  background-image: url(../img/nerds-logo.svg);
+}
+.main-header-logo:hover {
+  opacity: 0.8;
+}
+.main-header-logo:active {
+  opacity: 0.3;
+}
+.site-navigation, 
+.basket {
+  list-style: none;
+}
+.basket li {
+  display: inline;
+}
+.basket img {
+  opacity: 0.3;
+}
+.site-navigation a, 
+.basket a {
+  color: #000000;
+}
+.site-navigation a:hover, 
+.basket a:hover {
+  color: #fb565a;
+}
+.site-navigation a:active, 
+.basket a:active {
+  color: #a6a6a6;
+}
+/* слайдер ------------------------------------------------------------------------------*/
+.slider h2 {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: #000000;
+}
+.slider button {
+  width: 240px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #fb565a;
+  border: none;
+  line-height: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.slider button:hover {
+  background-color: #e74246;
+}
+.slider button:active {
+  background-color: #d7373b;
+  color: rgb(255,255,255, 0.3);
+}
+/* преимущества --------------------------------------------------------------------------- */
+.advantages-list h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.advantages-list li {
+  list-style-type: none;
+}
+.advantages-list button {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  width: 160px;
+  height: 50px;
+}
+.web-sites-color {
+  background-color: #fb565a;
+}
+.web-sites-color:hover {
+  background-color: #e74246;
+}
+.web-sites-color:active {
+  background-color: #d7373b;
+  color: rgb(255,255,255, 0.3);
+}
+.applications-color {
+  background-color: #00ca74;
+}
+.applications-color:hover {
+  background-color: #00bc6c;
+}
+.applications-color:active {
+  background-color: #00aa62;
+  color: rgb(255,255,255, 0.3);
+}
+.presentations-color {
+  background-color: #efc84a;
+}
+.presentations-color:hover {
+  background-color: #eab534;
+}
+.presentations-color:active {
+  background-color: #e5a722;
+  color: rgb(255,255,255, 0.3);
+}
+/* Студия ---------------------------------------------------------------------------------- */
+.studio h2  {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: #000000;
+}
+.studio h4 {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.table th {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 10.06px;
+  color: #000000;
+}
+.table td {
+  line-height: 18px;
+}
+/* Партнёры ---------------------------------------------------------------------------------- */
+.partners li {
+  display: inline;
+  list-style-type: none;
+  opacity: 0.2;
+}
+.partners li:hover {
+  opacity: 1;
+}
+.partners li:active {
+  opacity: 0.1;
+}
+/* Контакты -----------------------------------------------*/
+.contacts_background {
+  width: 319px;
+  height: 308px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+.contacts h4 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+}
+.contacts p {
+  font-size: 18px;
+  color: #666666;
+}
+.contacts button {
+  width: 219px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #fb565a;
+  border: none;
+  text-transform: uppercase;
+  line-height: 18px;
+}
+/* футер -----------------------------------------------*/
+.background_icon {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background-color: #e1e1e1;
+}
+.background_icon:hover {
+  background-color: #e74246;
+}
+.background_icon:active {
+  background-color: #d7373b;
+}
+.background_icon img:active {
+  opacity: 0.3;
+}
+.social-button {
+  display: inline-block;
+  list-style-type: none;
+}
+.footer-social h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 36px;
+  color: #000000;
+}
+.footer-social p {
+  line-height: 22px;
+  color: #444444;
+}
+/* скрытые заголовки которых нет  в макете -----------------------------------------------*/
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
