@@ -228,6 +228,41 @@ a {
   line-height: 22px;
   color: #444444;
 }
+/* напишите нам -----------------------------------------------*/
+.form {
+  width: 960px;
+  height: 590px;
+  background-color: #ffffff;
+}
+.write-us button {
+  background-color: #fb565a;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 18px;
+  color: #ffffff;
+  width: 260px;
+  height: 49px;
+}
+.write-us h2 {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: #000000;
+}
+.write-us label {
+  font-weight: 700;
+  line-height: 18px;
+  color: #000000;
+}
+.write-us-item input::-webkit-input-placeholder {
+  line-height: 18px;
+  color: #444444;
+}
+.write-us-item input, .write-us-item textarea {
+  border: 2px solid #d7dcde;
+  
+}
 /* скрытые заголовки которых нет  в макете -----------------------------------------------*/
 .visually-hidden {
   position: absolute;
