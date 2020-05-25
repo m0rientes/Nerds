@@ -1,5 +1,6 @@
 /* глобальные правила ------------------------------------------------------------------ */
 body {
+ 
   margin: 0;
   padding: 0;
   font-family: "Roboto", Arial, sans-serif;
@@ -7,30 +8,24 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: #283136;
+
   background-color: #ffffff;
 }
 a {
   text-decoration: none;
 }
-/* Навигация -----------------------------------------------------------------------------*/
+/* хэдер -----------------------------------------------------------------------------*/
 .main-header {
-  width: 100%;
-  height: 545px;
   background-color: #eeeeee;
+  min-height: 545px;
 }
-.main-navigation {
-  display: flex;
-  justify-content: space-between;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #000000;
-}
+/* Логотип ------------------------------*/
 .main-header-logo {
+  background-image: url(../img/nerds-logo.svg);
+  background-repeat: no-repeat;
   width: 160px;
   height: 65px;
-  background-image: url(../img/nerds-logo.svg);
+  margin: 49px 200px 0 140px;
 }
 .main-header-logo:hover {
   opacity: 0.8;
@@ -38,22 +33,41 @@ a {
 .main-header-logo:active {
   opacity: 0.3;
 }
+/* Навигация по сайту --------------------------------------*/
+.main-navigation {
+  display: flex;
+  justify-content: flex-start;
+  line-height: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000000;
+}
 .site-navigation {
-  width: 760px;
+  padding: 0;
+  margin: 80px 245px 0 0;
   list-style: none;
 } 
+.site-navigation li {
+  margin-left: 27px;
+  display: inline;
+}
+.site-navigation li:first-child {
+  margin-left: 0;
+}
+/* Корзина -------------------------------------------*/
 .basket {
-  width: 160px;
+  margin: 80px 140px 0 0;
+  padding: 0;
   list-style: none;
 }
 .basket li {
   display: inline;
 }
+.basket li:last-child {
+  margin-left: 10px;
+}
 .basket img {
   opacity: 0.3;
-}
-.site-navigation li {
-  display: inline;
 }
 .site-navigation a, 
 .basket a {
@@ -100,8 +114,9 @@ a {
 .advantages-list {
   display: flex;
   justify-content: space-between;
-  margin: 0;
-  padding: 0;
+  border-bottom: 2px solid #eeeeee;
+  margin: 0 200px 0 140px;
+  padding: 0 0 80px 0;
 }
 .advantages-list h4 {
   font-weight: 700;
@@ -112,7 +127,8 @@ a {
 }
 .advantages-list li {
   list-style-type: none;
-  width: 360px;
+
+  width: 300px;
 }
 .advantages-list button {
   color: #ffffff;
@@ -154,7 +170,39 @@ a {
   color: rgb(255,255,255, 0.3);
 }
 /* Студия ---------------------------------------------------------------------------------- */
+.studio {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 75px;
+}
+.studio_orders {
+  width: 660px;
+  margin-left: 140px;
+}
+.studio_orders h4 {
+  margin: 0;
+}
+.studio-list {
+  margin: 0;
+}
+.studio-item {
+  margin-top: 32px;
+}
+.studio_orders p {
+  margin: 0 0 45px 0;
+}
+.studio_percent {
+  width: 360px;
+  margin-right: 140px;
+}
+.studio_percent h4 {
+  margin: 40px 0 27px 0;
+}
 .studio h2  {
+  margin: 35px 0 32px 0;
+  padding: 0;
   font-weight: 500;
   font-size: 45px;
   line-height: 45px;
@@ -170,15 +218,32 @@ a {
   font-size: 45px;
   line-height: 10.06px;
   color: #000000;
+  height: 68px;
+  padding: 0 22px 12px 0;
 }
 .table td {
   line-height: 18px;
 }
 /* Партнёры ---------------------------------------------------------------------------------- */
-.partners li {
-  display: inline;
+.partners {
+   border-bottom: 2px solid #eeeeee;
+}
+.partners ul {
+  padding: 0;
+  margin: 0 140px 0 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.center_img {
+  width: 260px;
+  min-height: 180px;
+  margin-top: 0 auto;
+  display: flex;
   list-style-type: none;
   opacity: 0.2;
+}
+.center_img img{
+  margin: auto;
 }
 .partners li:hover {
   opacity: 1;
@@ -187,6 +252,9 @@ a {
   opacity: 0.1;
 }
 /* Контакты -----------------------------------------------*/
+.contacts img {
+  margin: 80px 0 69px 0;
+}
 .contacts_background {
   width: 319px;
   height: 308px;
@@ -215,6 +283,21 @@ a {
   line-height: 18px;
 }
 /* футер -----------------------------------------------*/
+.main-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin: 69px 140px 69px 140px;
+}
+.footer-social {
+  width: 260px;
+  margin-right: 140px;
+}
+.footer-social ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
 .background_icon {
   border-radius: 50%;
   display: flex;
@@ -237,15 +320,17 @@ a {
   display: inline-block;
   list-style-type: none;
 }
-.footer-social h3 {
+.footer_discounts h3 {
   font-weight: 700;
   font-size: 36px;
   line-height: 36px;
   color: #000000;
+  margin: 5px 0 8px 0;
 }
-.footer-social p {
+.footer_discounts p {
   line-height: 22px;
   color: #444444;
+  margin: 0;
 }
 /* напишите нам -----------------------------------------------*/
 .form {
@@ -289,8 +374,4 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-/* сеточные стили --------------------------------------------------------------------------------*/
-body, html {
-
 }
