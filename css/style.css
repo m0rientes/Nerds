@@ -2,12 +2,12 @@
 body {
   margin: 0;
   padding: 0;
+  min-width: 1440px;
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   color: #283136;
-
   background-color: #ffffff;
 }
 a {
@@ -16,7 +16,6 @@ a {
 /* хэдер -----------------------------------------------------------------------------*/
 .main-header {
   background-color: #eeeeee;
-  min-height: 545px;
 }
 /* Логотип ------------------------------*/
 .main-header-logo {
@@ -40,7 +39,7 @@ a {
 .site-navigation {
   display: flex;
   padding: 0;
-  margin: 80px 245px 0 0;
+  margin: 75px 245px 0 0;
   list-style: none;
 }
 .site-navigation li {
@@ -51,16 +50,26 @@ a {
 }
 /* Корзина -------------------------------------------*/
 .basket {
-  margin: 80px 140px 0 0;
+  position: relative;
+  margin: 75px 140px 0 0;
   padding: 0;
   list-style: none;
 }
 .basket li {
   margin-left: 40px;
 }
-.site-navigation a, 
-.basket a {
+.site-navigation-items a, 
+.buy-product a {
   color: #000000;
+}
+.buy-product a:before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-image: url(../img/cart-icon.png);
 }
 .site-navigation a:hover, 
 .basket a:hover {
@@ -83,19 +92,21 @@ a {
   line-height: 55px;
   font-weight: 500;
   color: #000000;
-  margin: 76px 0 23px 0;
+  margin: 68px 0 26px 0;
 }
 .slider p {
-  margin: 0 0 41px 0;
+  margin: 0 0 39px 0;
 }
 .slider button {
+  margin: 0 0 80px 0;
+  padding: 0;
   width: 240px;
   height: 50px;
   color: #ffffff;
   background-color: #fb565a;
   border: none;
-  line-height: 18px;
   font-size: 16px;
+  line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -107,30 +118,42 @@ a {
   color: rgb(255,255,255, 0.3);
 }
 .img_slider {
+  position: relative;
   width: 760px;
-  margin: 18px 0 0 30px;
+  margin: 8px 0 0 31px;
+}
+.img_slider img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 /* преимущества --------------------------------------------------------------------------- */
 .advantages-list {
   display: flex;
-  justify-content: space-between;
   border-bottom: 2px solid #eeeeee;
-  margin: 80px 200px 0 140px;
+  margin: 80px 100px 0 140px;
   padding: 0 0 80px 0;
 }
+.advantages-list li {
+  list-style-type: none;
+  width: 300px;
+  margin-right: 100px;
+}
 .advantages-list h4 {
+  margin: 18px 0 16px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #000000;
   text-transform: uppercase;
 }
-.advantages-list li {
-  list-style-type: none;
-
-  width: 300px;
+.advantages-list-items p {
+  margin: 0;
+  line-height: 24px;
 }
 .advantages-list button {
+  padding: 0;
+  margin: 32px 0 0 0;
   color: #ffffff;
   font-size: 16px;
   line-height: 18px;
@@ -173,32 +196,34 @@ a {
 .studio {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin: 40px 140px 0 140px;
   border-bottom: 2px solid #eeeeee;
-  padding-bottom: 75px;
+  padding-bottom: 49px;
 }
 .studio_orders {
-  width: 660px;
-  margin-left: 140px;
+  width: 760px;
 }
 .studio_orders h4 {
   margin: 0;
 }
 .studio-list {
-  margin: 0;
+  padding: 0 0 0 36px;
+  margin: 24px 0 0 0;
 }
 .studio-item {
-  margin-top: 32px;
+  margin: 0 0 24px 0;
 }
 .studio_orders p {
-  margin: 0 0 45px 0;
+  margin: 0 0 39px 0;
 }
 .studio_percent {
-  width: 360px;
-  margin-right: 140px;
+  width: 400px;
+}
+.studio_percent img {
+  margin: 0 0 0 40px;
 }
 .studio_percent h4 {
-  margin: 40px 0 27px 0;
+  margin: 30px 0 27px 56px;
 }
 .studio h2  {
   margin: 35px 0 32px 0;
@@ -213,32 +238,36 @@ a {
   text-transform: uppercase;
   font-weight: 700;
 }
+.table {
+  margin: 0 0 0 38px;
+}
 .table th {
   font-weight: 700;
   font-size: 45px;
   line-height: 10.06px;
   color: #000000;
   height: 68px;
-  padding: 0 22px 12px 0;
+  padding: 0 14px 0 0;
+  text-align: left;
 }
 .table td {
   line-height: 18px;
-  padding: 0;
+  padding: 5px 0 0 0;
 }
 /* Партнёры ---------------------------------------------------------------------------------- */
 .partners {
-   border-bottom: 2px solid #eeeeee;
+  margin: 0 140px 0 140px;
+  border-bottom: 2px solid #eeeeee;
 }
 .partners ul {
+  margin: 0;
   padding: 0;
-  margin: 0 140px 0 140px;
   display: flex;
   justify-content: space-between;
 }
 .center_img {
   width: 260px;
-  min-height: 180px;
-  margin-top: 0 auto;
+  min-height: 178px;
   display: flex;
   list-style-type: none;
   opacity: 0.2;
@@ -257,19 +286,22 @@ a {
   position: relative;
 }
 .contacts img {
-  margin: 80px 0 69px 0;
+  margin: 82px 0 61px 0;
   max-width: 100%;
 }
 .contacts_background {
   position: absolute;
-  top: 134px;
-  left: 138px;
+  top: 136px;
+  left: 140px;
   width: 319px;
   height: 308px;
   background-color: #ffffff;
-  border: 1px solid #000000;
+  border: none;
+
 }
-.contacts h4 {
+.contacts_background h4 {
+  display: inline-block;
+  margin: 50px 0 22px 50px;
   text-align: center;
   font-weight: 700;
   font-size: 18px;
@@ -278,8 +310,9 @@ a {
   text-transform: uppercase;
 }
 .contacts p {
-  font-size: 18px;
+  line-height: 18px;
   color: #666666;
+  margin: 0 0 37px 51px;
 }
 .contacts button {
   width: 219px;
@@ -289,12 +322,13 @@ a {
   border: none;
   text-transform: uppercase;
   line-height: 18px;
+  margin: 0 0 0 50px;
 }
 /* футер -----------------------------------------------*/
 .main-footer {
   display: flex;
   justify-content: flex-start;
-  margin: 69px 140px 69px 140px;
+  margin: 0 140px 69px 140px;
 }
 .footer-social {
   width: 260px;
@@ -333,7 +367,7 @@ a {
   font-size: 36px;
   line-height: 36px;
   color: #000000;
-  margin: 5px 0 8px 0;
+  margin: 7px 0 10px 0;
 }
 .footer_discounts p {
   line-height: 22px;
