@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div class="wrapper"></div>
 		<header class="main-header">
 			<nav class="main-navigation">
 				<a class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс"></a>
@@ -146,25 +145,24 @@
 				<p>Скидка 10% для друзей из социальных сетей.</p>
 			</div>
 		</footer>
-		<section class="form shadow">
-			<h2>Напишите нам</h2>
+		<section class="form">
 			<form class="write-us" action="https://echo.htmlacademy.ru" method="post">
-				<p class="write-us-item display_form">
+				<h2>Напишите нам</h2>
+				<p class="write-us-item">
 					<label for="write-us-name">Ваше имя:</label>
-					<input id="write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+					<input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
 				</p>
-				<p class="write-us-item display_form">
+				<p class="write-us-item">
 					<label for="write-us-e-mail">Ваш e-mail:</label>
-					<input type="text" id="write-us-e-mail" name="e-mail" value="" placeholder="email@example.com">	
+					<input type="text" id="write-us-e-mail" name="e-mail" placeholder="email@example.com">	
 				</p>
-				<p class="textarea display_form">
-					<label for="text">Текст письма:</label>
-					<textarea name="text" id="text" cols="91" rows="5">В свободной форме</textarea>
+				<p class="write-us-item">
+					<label>Текст письма:</label>
 				</p>
+				<p class="write-us-item"><textarea name="text" id="text" cols="30" rows="10">В свободной форме</textarea></p>
 				<button class="button" type="submit">Отправить</button>
 			</form>
-			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+			<button class="modal-close" type="button" aria-label="Закрыть"></button>
 		</section>
-		<div class="modal_overlay"></div>
 	</body>
 </html>
