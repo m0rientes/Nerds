@@ -97,7 +97,7 @@ a {
 .basket a:active {
   color: #a6a6a6;
 }
-/* слайдер ------------------------------------------------------------------------------*/
+/* radio button ------------------------------------------------------------------------------*/
 .slider_radio_button {
   display: flex;
   justify-content: space-between;
@@ -132,6 +132,7 @@ a {
   border: 2px solid #c2c2c2;
   border-radius: 50%;
 }
+/* Слайдер ------------------------------------------------------------------*/
 .slider {
   display: flex;
   position: relative;
@@ -390,6 +391,9 @@ background-color: #fb565a;
   opacity: 0.1;
 }
 /* Контакты -----------------------------------------------*/
+iframe {
+  margin-left: -150px;
+}
 .background_img {
   height: 416px;
   background-image: url(../img/map.jpg);
@@ -495,7 +499,10 @@ background-color: #fb565a;
   left: 240px;
   right: 240px;
   bottom: 179px;
-  z-index: 2;
+  z-index: 10;
+}
+.form-show {
+  display: block;
 }
 .shadow {
   box-shadow: 0 0 15px 15px rgba(0, 1, 1, 0.25);
@@ -596,7 +603,7 @@ background-color: #fecccd;
 /* скрытые заголовки которых нет  в макете -----------------------------------------------*/
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
