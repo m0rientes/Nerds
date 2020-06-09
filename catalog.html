@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Магазин</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="main-header catalog-header">
+		<nav class="main-navigation container">
+			<a href="index.html" class="main-header-logo"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нердс"></a>
+			<ul class="site-navigation">
+				<li class="site-navigation-items">
+					<a href="studio.html">Студия</a>
+				</li>
+				<li class="site-navigation-items">
+					<a href="clients.html">Клиенты</a>
+				</li>
+				<li class="site-navigation-items curent-site-navigation-items">
+					<a>Магазин</a>
+				</li>
+				<li class="site-navigation-items">
+					<a href="contacts.html">Контакты</a>
+				</li>
+			</ul>
+			<ul class="basket">
+				<li class="buy-product">
+					<a href="basket.html">Корзина</a>
+				</li>
+			</ul>	
+		</nav>
+		<div class="container">
+			<h1>Магазин готовых шаблонов</h1>
+		</div>
+		
+	</header>
+	<main>
+		<section class="container">
+			<div class="filter">
+				<div class="cost">
+					<h4>Стоимость:</h4>
+				</div>
+				<div class="grid">
+					<h4>Сетка:</h4>
+					<div class="position_inline">
+						<label class="grid-radio" for="adaptive"><input type="radio" id="adaptive" name="radio_grid" checked><span></span>Адаптивная</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-radio" for="fixed"><input type="radio" id="fixed" name="radio_grid"><span></span>Фиксированная</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-radio" for="rubber"><input type="radio" id="rubber" name="radio_grid"><span></span>Резиновая</label>
+					</div>
+				</div>
+				<div class="features">
+					<h4>Особенности:</h4>
+					<div class="position_inline">
+						<label class="grid-checkbox" for="slider"><input type="checkbox" id="slider" name="checkbox_grid" checked><span></span>Слайдер</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-checkbox" for="advantages"><input type="checkbox" id="advantages" name="checkbox_grid"><span></span>Блок преимуществ</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-checkbox" for="news"><input type="checkbox" id="news" name="checkbox_grid"><span></span>Новости</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-checkbox" for="galery"><input type="checkbox" id="galery" name="checkbox_grid"><span></span>Галерея</label>
+					</div>
+					<div class="position_inline">
+						<label class="grid-checkbox" for="basket"><input type="checkbox" id="basket" name="checkbox_grid"><span></span>Корзина</label>
+					</div>
+				</div>
+				<button class="filter_button" type="submit">Показать</button>
+			</div>
+		</section>
+		<div class="background_img">
+			<section class="contacts container">
+				<h2 class="visually-hidden">Как до нас добраться</h2>
+				
+				<div class="contacts_background">
+					<h4>Nёrds design studio</h4>
+					<p>191186, Санкт-Петербург,<br> 
+					ул. Б. Конюшенная, д. 19/8<br><br>
+					тел. +7 (812) 275-75-75</p>
+					<button class="link_write_us">Напишите нам</button>
+				</div>
+			</section>
+		</div>
+	</main>
+	<footer class="main-footer">
+			<div class="footer_flex container">
+				<div class="footer-social">		
+					<ul>
+						<li class="social-button">
+							<a href="#">
+								<div class="background_icon">
+									<img src="img/vk-icon.svg" alt="Вконтакте">
+								</div>
+							</a>
+						</li>
+						<li class="social-button">
+							<a href="#">
+								<div class="background_icon">
+									<img src="img/fb-icon.svg" alt="Фэйсбук">
+								</div>
+							</a>
+						</li>
+						<li class="social-button">
+							<a href="#">
+								<div class="background_icon">
+									<img src="img/insta-icon.svg" alt="Инстаграм">
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer_discounts">
+					<h3>Давайте дружить, это выгодно!</h3>
+					<p>Скидка 10% для друзей из социальных сетей.</p>
+				</div>
+			</div>
+		</footer>
+		<section class="form shadow">
+			<h2>Напишите нам</h2>
+			<form class="write-us" action="https://echo.htmlacademy.ru" method="post">
+				<p class="write-us-item display_form">
+					<label for="write-us-name">Ваше имя:</label>
+					<input id="write-us-name" type="text" name="name" value="" placeholder="Имя Фамилия">
+				</p>
+				<p class="write-us-item display_form">
+					<label for="write-us-e-mail">Ваш e-mail:</label>
+					<input type="text" id="write-us-e-mail" name="e-mail" value="" placeholder="email@example.com">	
+				</p>
+				<p class="textarea display_form">
+					<label for="text">Текст письма:</label>
+					<textarea name="text" id="text" cols="91" rows="5">В свободной форме</textarea>
+				</p>
+				<button class="button" type="submit">Отправить</button>
+			</form>
+			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
+		</section>
+		<div class="modal_overlay"></div>
+		<script src="Java Script/popup.js"></script>
+</body>
+	
