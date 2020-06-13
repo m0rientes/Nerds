@@ -401,32 +401,40 @@ background-color: #fb565a;
 .partners li:active {
   opacity: 0.1;
 }
-/* Фильтр стоимость*/
+/* Фильтр стоимость--------------------------*/
 .filter {
   width: 260px;
   display: flex;
   flex-direction: column;
 }
-.cost {
-  margin-top: 60px;
+.filter-cost {
+  margin: 60px 0 0 0;
   min-height: 205px;
-  border: 1px solid grey;
+}
+.filter-grid {
+  min-height: 142px;
+}
+.filter-features {
+  min-height: 221px;
+}
+.cost {
+  margin: 0 0 50px 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
 }
 .grid {
-  margin: 59px 0 48px 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 142px;
-  border: 1px solid grey;
+  margin: 60px 0 17px 0;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
 }
 .features {
-  min-height: 221px;
-  border: 1px solid grey;
-  margin: 0 0 47px 0;
-}
-.cost h4,
-.features h4 {
-  margin: 0;
+  margin: 47px 0 17px 0;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
@@ -441,75 +449,102 @@ background-color: #fb565a;
   line-height: 18px;
   font-weight: 500;
   text-transform: uppercase;
+  margin: 31px 0 0 0;
+  padding: 0;
 }
 .position_inline {
   display: flex;
   margin-bottom: 15px;
 }
-.grid h4 {
-  margin: 0 0 17px 0;
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-}
 .position_inline input {
   display: none;
 }
+/*Радио спаны--------------------------------------------*/
 .grid-radio {
   display: flex;
   align-items: center;
 }
-/*Радио спаны--------------------------------------------*/
-.grid-radio span {
-  float: left;
-  margin-right: 10px;
-}
 .grid-radio span {
   position: relative; /* Относительное позиционирование */
   display: flex;
-  width: 25px; 
-  height: 25px;
+  width: 17px; 
+  height: 17px;
   background: #ffffff; /* белый цвет фона */
   border-radius: 50%; /* Круглый переключатель */
   border: 4px solid #a6a6a6;
+  float: left;
+  margin-right: 10px;
 }
 .grid-radio input:checked + span::before { /* Добавляем белую точку по центру */
   content: '';
   position: absolute;
-  left: 6px; 
-  top: 6px;
+  left: 4px; 
+  top: 4px;
   width: 9px; 
   height: 9px;
-  border: 2px solid #a6a6a6;
   border-radius: 50%;
   background-color: #a6a6a6;
 }
-/*Чекбоксы спаны -------------------------*/
-.grid-checkbox span {
-  float: left;
-  margin-right: 10px;
+/* Чекбоксы----------*/
+.checkbox {
+  margin: 0 0 17px 0;
 }
-.grid-checkbox span {
-  position: relative; /* Относительное позиционирование */
-  display: flex;
-  width: 25px; 
-  height: 25px;
-  background: #ffffff; /* белый цвет фона */
-  
-  border: 4px solid #a6a6a6;
+/*прячем чекбокс который оригинльный */
+.checkbox input[type="checkbox"] {
+  opacity: 0;
+  margin: 0 0 0 -14px;
 }
-.grid-checkbox input:checked + span::before { /* Добавляем белую точку по центру */
-  content: '';
+/* создаем поддельный чекбокс, а именно квадрт (внешний элемент через псевдоэлемент before) */
+.checkbox label::before{
+  content: "";
+  display: inline-block;
+ 
+  height: 19px;
+  width: 19px;
+ 
+  border: 2px solid #a6a6a6;
+  border-radius: 15%;
+  margin: 0 0 17px 0; 
+}
+/* создаем галку через псевдо элемент after */
+.checkbox label::after {
+  content: "";
+  display: inline-block;
+  height: 8px;
+  width: 16px;
+  border-left: 3px solid #a6a6a6;
+  border-bottom: 3px solid #a6a6a6;
+  transform: rotate(-45deg);
+}
+/*  позиционирование внешнего блока и галки */
+.checkbox label {
+  position: relative;
+  margin: 0 0 0 32px;
+}
+.checkbox label::before,
+.checkbox label::after {
   position: absolute;
-  left: 6px; 
-  top: 6px;
-  width: 9px; 
-  height: 9px;
-  border: 2px solid #a6a6a6;
-  border-radius: 50%;
-  background-color: #a6a6a6;
+}
+/*Внешний блок*/
+.checkbox label::before {
+  left: -35px;
+}
+/*Галка*/
+.checkbox label::after {
+  left: -29px;
+  top: 0px;
+}
+/*Прячем галку по умолчанию*/
+.checkbox input[type="checkbox"] + label::after {
+  content: none;
+}
+/*Показываем галку по состоянию checked*/
+.checkbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+/*Добавляем фокус к внешнему блоку поддельного чекбокса*/
+.checkbox input[type="checkbox"]:focus + label::before {
+  outline: rgb(59, 153, 252) auto 5px;
 }
 /* Контакты -----------------------------------------------*/
 iframe {

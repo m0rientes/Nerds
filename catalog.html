@@ -39,40 +39,47 @@
 	<main>
 		<section class="container">
 			<div class="filter">
-				<div class="cost">
-					<h4>Стоимость:</h4>
+				<div class="filter-cost">
+					<h4 class="cost">Стоимость:</h4>
 				</div>
-				<div class="grid">
-					<h4>Сетка:</h4>
-					<div class="position_inline">
-						<label class="grid-radio" for="adaptive"><input type="radio" id="adaptive" name="radio_grid" checked><span></span>Адаптивная</label>
+				<form class="catalog-form" action="https://echo.htmlacademy.ru" method="post">
+					<div class="filter-grid">
+						<h4 class="grid">Сетка:</h4>
+						<div class="position_inline">
+							<label class="grid-radio" for="adaptive"><input type="radio" id="adaptive" name="radio_grid" value="Адаптивная" checked><span></span>Адаптивная</label>
+						</div>
+						<div class="position_inline">
+							<label class="grid-radio" for="fixed"><input type="radio" id="fixed" name="radio_grid" value="Фиксированная"><span></span>Фиксированная</label>
+						</div>
+						<div class="position_inline">
+							<label class="grid-radio" for="rubber"><input type="radio" id="rubber" name="radio_grid" value="Резиновая"><span></span>Резиновая</label>
+						</div>
 					</div>
-					<div class="position_inline">
-						<label class="grid-radio" for="fixed"><input type="radio" id="fixed" name="radio_grid"><span></span>Фиксированная</label>
+					<div class="filter-features">
+						<h4 class="features">Особенности:</h4>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox_1" name="slider" value="Слайдер" checked>
+    						<label for="checkbox_1">Слайдер</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox_2" name="benefits block" value="Блок преимуществ">
+    						<label for="checkbox_2">Блок преимуществ</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox_3" name="news" value="Новости" checked>
+    				    	<label for="checkbox_3">Новости</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox_4" name="galery" value="Галерея">
+    						<label for="checkbox_4">Галерея</label>
+						</div>
+						<div class="checkbox">
+							<input type="checkbox" id="checkbox_5" name="basket" value="Корзина">
+    						<label for="checkbox_5">Корзина</label>
+						</div>
 					</div>
-					<div class="position_inline">
-						<label class="grid-radio" for="rubber"><input type="radio" id="rubber" name="radio_grid"><span></span>Резиновая</label>
-					</div>
-				</div>
-				<div class="features">
-					<h4>Особенности:</h4>
-					<div class="position_inline">
-						<label class="grid-checkbox" for="slider"><input type="checkbox" id="slider" name="checkbox_grid" checked><span></span>Слайдер</label>
-					</div>
-					<div class="position_inline">
-						<label class="grid-checkbox" for="advantages"><input type="checkbox" id="advantages" name="checkbox_grid"><span></span>Блок преимуществ</label>
-					</div>
-					<div class="position_inline">
-						<label class="grid-checkbox" for="news"><input type="checkbox" id="news" name="checkbox_grid"><span></span>Новости</label>
-					</div>
-					<div class="position_inline">
-						<label class="grid-checkbox" for="galery"><input type="checkbox" id="galery" name="checkbox_grid"><span></span>Галерея</label>
-					</div>
-					<div class="position_inline">
-						<label class="grid-checkbox" for="basket"><input type="checkbox" id="basket" name="checkbox_grid"><span></span>Корзина</label>
-					</div>
-				</div>
-				<button class="filter_button" type="submit">Показать</button>
+					<button class="filter_button" type="submit">Показать</button>
+				</form>
 			</div>
 		</section>
 		<div class="background_img">
@@ -141,6 +148,16 @@
 			</form>
 			<button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span></button>
 		</section>
+
+
+
+
+
+	
+
+
+
+
 		<div class="modal_overlay"></div>
 		<script src="Java Script/popup.js"></script>
 </body>
