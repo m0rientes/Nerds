@@ -551,6 +551,42 @@ background-color: #fb565a;
 .checkbox input[type="checkbox"]:focus + label::before {
   outline: rgb(59, 153, 252) auto 5px;
 }
+/* сортировать по: -------*/
+.arrows-up-sown {
+  width: 60px;
+  margin: 0 0 0 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+.arrows-up-sown li {
+  margin-left: 18px;
+}
+.sorting-block {
+  margin: 57px 0 55px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.sorting-block ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.sorting-block-items {
+  list-style-type: none;
+}
+.sorting-block-items a {
+  margin: 0 25px 0 0;
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+  opacity: 0.3;
+  text-transform: uppercase;
+}
+.current-item a {
+  opacity: 1;
+}
 .product-card {
   width: 760px;
   margin: 0 0 0 140px;
@@ -631,6 +667,62 @@ background-color: #fb565a;
   position: relative;/* Центрируем кнопку в блоке */
   left: 50%;
   transform: translate(-50%, 0);
+}
+.sorting-block h4 {
+  width: 360px;
+  margin: 0 40px 0 0;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+.pagination {
+  padding: 0;
+  display: flex;
+}
+.pagination-items {
+  margin: 0 11px 0 0;
+  list-style-type: none;
+  width: 50px;
+  height: 50px;
+}
+.pagination-items a {
+  width: 50px;
+  height: 50px;
+  color: #000000;
+  line-height: 18px;
+  border: 3px solid #eeeeee;
+  border-radius: 5%;
+  background-color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.current-page a {
+  border: 3px solid #dbdbdb;
+  background-color: #ffffff;
+}
+.next-page {
+  width: 260px;
+  height: 50px;
+}
+.next-page a {
+  width: 260px;
+  height: 50px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #eeeeee;
+  border-radius: 3%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
 }
 /* Контакты -----------------------------------------------*/
 iframe {
