@@ -402,9 +402,83 @@ background-color: #fb565a;
   opacity: 0.1;
 }
 /* Фильтр стоимость--------------------------*/
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.range-filter {
+  width: 260px;
+  margin: 49px 0 0 0;
+}
+.filter-item legend {
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.range-controls {
+  height: 41px;/* зададим высоту 41 вместо 80, так как (внутренние отступы учитываются в размере) P.S. 41высота + 39 верхний отступ =80*/ 
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  margin: 0 0 15px 0;
+  padding: 39px 20px 0 20px; /*выравнивание шкалы по центру (высота блока 80пикс-высота шкалы 2 пикс и разделить на 2=39пикс)*/
+  position: relative;/* для кружков задаем позиционирование обёртки фильтра*/
+}
+.range-controls .scale {
+  height: 2px;
+  background-color: #d7dcde;
+}
+.range-controls .bar {
+  width: 70%; /*подбираем вручную ширину в %*/
+  height: 2px;
+  background-color: #00ca74;
+}
+.range-controls .toggle {
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  cursor: pointer;
+}
+.range-controls .toggle-min {
+  left: 0;
+}
+.range-controls .toggle-max {
+  left: 160px;
+}
+.price-controls {
+  font-size: 0;
+}
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.price-controls input {
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+  width: 60px;
+  margin: 0 0 0 10px;
+  padding: 8px 10px 8px 10px;
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+.max-price {
+  text-align: right;
+}
 .flex_grid {
   display: flex;
-
 }
 
 .filter {

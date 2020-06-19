@@ -38,9 +38,24 @@
 	<main>
 		<section class="container flex_grid">
 			<div class="filter">
-				<div class="filter-cost">
-					<h4 class="cost">Стоимость:</h4>
-				</div>
+				<form class="filter-cost" action="https://echo.htmlacademy.ru" method="GET">
+					<fieldset class="filter-item">
+						<legend>Стоимость:</legend>
+						<div class="range-filter">
+							<div class="range-controls">
+								<div class="scale">
+									<div class="bar"></div>
+								</div>
+								<div class="toggle toggle-min"></div>
+								<div class="toggle toggle-max"></div>
+							</div>
+							<div class="price-controls">
+								<label for="" class="min-price">от <input name="min-price" type="text" value="0"></label>
+								<label for="" class="max-price">до <input name="max-price" type="text" value="15000"></label>
+							</div>
+						</div>
+					</fieldset>
+				</form>
 				<form class="catalog-form" action="https://echo.htmlacademy.ru" method="post">
 					<div class="filter-grid">
 						<h4 class="grid">Сетка:</h4>
